@@ -1,5 +1,6 @@
 package io.github.ichikura10.meaningfulAdvancements
 
+import io.github.ichikura10.meaningfulAdvancements.attachment.ModAttachments
 import io.github.ichikura10.meaningfulAdvancements.event.ModEvents
 import net.minecraft.client.Minecraft
 import net.neoforged.fml.common.Mod
@@ -15,6 +16,8 @@ object MeaningfulAdvancements {
     const val ID = "meaningful_advancements"
 
     init {
+        ModAttachments.register(MOD_BUS)
+
         MOD_BUS.addListener(::onCommonSetup)
 
         NeoForge.EVENT_BUS.register(ModEvents)
