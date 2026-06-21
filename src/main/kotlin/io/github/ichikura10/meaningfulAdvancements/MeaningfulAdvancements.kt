@@ -2,6 +2,7 @@ package io.github.ichikura10.meaningfulAdvancements
 
 import io.github.ichikura10.meaningfulAdvancements.attachment.ModAttachments
 import io.github.ichikura10.meaningfulAdvancements.event.ModEvents
+import io.github.ichikura10.meaningfulAdvancements.item.ModItems
 import net.minecraft.client.Minecraft
 import net.neoforged.fml.common.Mod
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent
@@ -17,6 +18,7 @@ object MeaningfulAdvancements {
 
     init {
         ModAttachments.register(MOD_BUS)
+        ModItems.register(MOD_BUS)
 
         MOD_BUS.addListener(::onCommonSetup)
 
